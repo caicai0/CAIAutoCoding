@@ -17,6 +17,9 @@
 		4B49C04F1AE0EB0F0074CCB2 /* autoCodingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49C04E1AE0EB0F0074CCB2 /* autoCodingTests.m */; };
 		4B49C0591AE0EBA80074CCB2 /* Models.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B49C0581AE0EBA80074CCB2 /* Models.plist */; };
 		4B49C05D1AE0F1080074CCB2 /* file.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B49C05C1AE0F1080074CCB2 /* file.plist */; };
+		4B6858F81AE4D92C00155ED9 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B6858F71AE4D92C00155ED9 /* WebKit.framework */; };
+		4B6858FB1AE4EFCD00155ED9 /* demoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6858FA1AE4EFCD00155ED9 /* demoViewController.m */; };
+		4B6858FE1AE4F01100155ED9 /* CAITitleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6858FD1AE4F01100155ED9 /* CAITitleBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +49,11 @@
 		4B49C04E1AE0EB0F0074CCB2 /* autoCodingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = autoCodingTests.m; sourceTree = "<group>"; };
 		4B49C0581AE0EBA80074CCB2 /* Models.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Models.plist; sourceTree = "<group>"; };
 		4B49C05C1AE0F1080074CCB2 /* file.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = file.plist; sourceTree = "<group>"; };
+		4B6858F71AE4D92C00155ED9 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		4B6858F91AE4EFCD00155ED9 /* demoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = demoViewController.h; sourceTree = "<group>"; };
+		4B6858FA1AE4EFCD00155ED9 /* demoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = demoViewController.m; sourceTree = "<group>"; };
+		4B6858FC1AE4F01100155ED9 /* CAITitleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAITitleBar.h; sourceTree = "<group>"; };
+		4B6858FD1AE4F01100155ED9 /* CAITitleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAITitleBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B6858F81AE4D92C00155ED9 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +78,7 @@
 		4B49C0231AE0EB0F0074CCB2 = {
 			isa = PBXGroup;
 			children = (
+				4B6858F71AE4D92C00155ED9 /* WebKit.framework */,
 				4B49C02E1AE0EB0F0074CCB2 /* autoCoding */,
 				4B49C04B1AE0EB0F0074CCB2 /* autoCodingTests */,
 				4B49C02D1AE0EB0F0074CCB2 /* Products */,
@@ -98,6 +108,10 @@
 				4B49C02F1AE0EB0F0074CCB2 /* Supporting Files */,
 				4B49C0581AE0EBA80074CCB2 /* Models.plist */,
 				4B49C05C1AE0F1080074CCB2 /* file.plist */,
+				4B6858F91AE4EFCD00155ED9 /* demoViewController.h */,
+				4B6858FA1AE4EFCD00155ED9 /* demoViewController.m */,
+				4B6858FC1AE4F01100155ED9 /* CAITitleBar.h */,
+				4B6858FD1AE4F01100155ED9 /* CAITitleBar.m */,
 			);
 			path = autoCoding;
 			sourceTree = "<group>";
@@ -232,6 +246,8 @@
 			files = (
 				4B49C0381AE0EB0F0074CCB2 /* autoCoding.xcdatamodeld in Sources */,
 				4B49C0351AE0EB0F0074CCB2 /* AppDelegate.m in Sources */,
+				4B6858FE1AE4F01100155ED9 /* CAITitleBar.m in Sources */,
+				4B6858FB1AE4EFCD00155ED9 /* demoViewController.m in Sources */,
 				4B49C03B1AE0EB0F0074CCB2 /* ViewController.m in Sources */,
 				4B49C0321AE0EB0F0074CCB2 /* main.m in Sources */,
 			);
@@ -426,6 +442,7 @@
 				4B49C0541AE0EB0F0074CCB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B49C0551AE0EB0F0074CCB2 /* Build configuration list for PBXNativeTarget "autoCodingTests" */ = {
 			isa = XCConfigurationList;
@@ -434,6 +451,7 @@
 				4B49C0571AE0EB0F0074CCB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

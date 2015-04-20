@@ -76,8 +76,6 @@
         NSDictionary * property = propertiesDic[propertyName];
         NSString * dataType = property[@"dataType"];
         BOOL automic = [property[@"automic"]boolValue];
-//        NSString *serverName = property[@"serverName"];
-//        NSString *contentDataType = property[@"contentDataType"];
         
         NSString *automicS = automic?@"automic":@"nonatomic";
         [propertiesString appendFormat:@"@property (%@, %@)%@ %@;\n",automicS,[self retainModeFroDataType:dataType],dataType,propertyName];
@@ -103,6 +101,16 @@
     [modelH appendString:@"\n"];
     [modelH appendFormat:@"@end\n"];
     return modelH;
+}
+
+- (NSMutableString*)writeMforModel:(NSString *)modelName{
+    NSMutableString * modelM = [NSMutableString string];
+    [modelM appendString:@"//\n"];
+    [modelM appendFormat:@"//  %@.h\n",modelName];
+    [modelM appendString:@"//\n"];
+    [modelM appendFormat:@"//  Created by %@ on %@\n",self.fileDic[@"createBy"],[self dateNow]];
+    [modelM appendFormat:@"//  Copyright (c) %ld年 %@. All rights reserved.\n//\n",[self.components year],self.fileDic[@"copyright"]];
+    return modelM;
 }
 
 - (NSString *)dateNow{
