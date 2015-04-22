@@ -19,9 +19,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     [[CAIClient shareClient]getExcellentCourseFinish:^(CAIExcellentCourseResult * result, NSError *error) {
         NSLog(@"%@",result);
-        self.sections = [NSMutableArray arrayWithArray:result.list];
+        self.sections = [NSMutableArray arrayWithObjects:result.list, nil];
         [self.tableView reloadData];
     }];
     // Do any additional setup after loading the view.
@@ -34,13 +35,27 @@
 
 #pragma mark - UITableViewDataSource,UITableViewDelegate
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return self.sections.count;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    
-    return self.sections;
+    NSArray * arr = self.sections[section];
+    if (arr && arr.count) {
+        return arr.count;
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+    UITableViewCell * cell  =[tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    if (cell) {
+        NSArray * arr = self.sections[indexPath.section];
+        CAICourse * course = arr[indexPath.row];
+        cell.textLabel.text = course.courceName;
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%ld",course.studentCount];
+    }
+    return cell;
 }
 
 @end

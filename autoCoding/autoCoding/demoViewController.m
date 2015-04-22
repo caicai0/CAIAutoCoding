@@ -11,8 +11,6 @@
 
 @interface demoViewController ()
 
-@property(nonatomic, strong);
-
 @end
 
 @implementation demoViewController

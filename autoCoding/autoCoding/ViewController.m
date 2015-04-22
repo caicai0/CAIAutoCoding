@@ -42,7 +42,7 @@
     if (self.outPutPath && self.modelDic && self.fileDic) {
         for (NSString * modelName in self.modelDic.allKeys) {
             NSString * modelH = [self writeHForModel:modelName];
-            
+            NSString * modelM = [self writeMforModel:modelName];
         }
     }
 }
@@ -53,7 +53,7 @@
     [modelH appendFormat:@"//  %@.h\n",modelName];
     [modelH appendString:@"//\n"];
     [modelH appendFormat:@"//  Created by %@ on %@\n",self.fileDic[@"createBy"],[self dateNow]];
-    [modelH appendFormat:@"//  Copyright (c) %ld年 %@. All rights reserved.\n//\n",[self.components year],self.fileDic[@"copyright"]];
+    [modelH appendFormat:@"//  Copyright (c) %ld年 %@. All rights reserved.\n//\n\n",[self.components year],self.fileDic[@"copyright"]];
     
     
     NSDictionary * model = self.modelDic[modelName];
@@ -109,7 +109,40 @@
     [modelM appendFormat:@"//  %@.h\n",modelName];
     [modelM appendString:@"//\n"];
     [modelM appendFormat:@"//  Created by %@ on %@\n",self.fileDic[@"createBy"],[self dateNow]];
-    [modelM appendFormat:@"//  Copyright (c) %ld年 %@. All rights reserved.\n//\n",[self.components year],self.fileDic[@"copyright"]];
+    [modelM appendFormat:@"//  Copyright (c) %ld年 %@. All rights reserved.\n//\n\n",[self.components year],self.fileDic[@"copyright"]];
+    [modelM appendFormat:@"#import \"%@.h\"\n\n", modelName];
+
+    [modelM appendFormat:@"@implementation %@\n\n",modelName];
+    
+    NSDictionary * model = self.modelDic[modelName];
+    NSDictionary *propertiesDic = model[@"property"];
+    NSMutableArray * keyPathArray = [NSMutableArray array];
+    NSMutableArray * valueTansformeArray = [NSMutableArray array];
+    for (NSString * propertyName in propertiesDic.allKeys) {
+        NSDictionary * property = propertiesDic[propertyName];
+        NSString * serverName = property[@"serverName"];
+        NSString * dataType = property[@"dataType"];
+        NSString * contentDataType = property[@"contentDataType"];
+        
+        [keyPathArray addObject:[NSString stringWithFormat:@"\n             @\"%@\":@\"%@\"",propertyName,serverName]];
+        
+        if ([dataType isEqualToString: NSStringFromClass([NSArray class])]) {
+            [valueTansformeArray addObject:[NSString stringWithFormat:@"if ([key isEqualToString:@\"list\"]) {\n        return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[%@ class]];\n    }",contentDataType]];
+        }else if ([dataType isEqualToString:NSStringFromClass([NSArray class])]){
+            [valueTansformeArray addObject:[NSString stringWithFormat:@"if ([key isEqualToString:@\"list\"]) {\n        return [NSValueTransformer mtl_JSONDictionaryTransformerWithModelClass:[%@ class]];\n    }",contentDataType]];
+        }
+    }
+    NSString * keyPathString = [keyPathArray componentsJoinedByString:@","];
+    
+    [modelM appendFormat:@"+ (NSDictionary *)JSONKeyPathsByPropertyKey{\n    return @{%@\n             };\n}\n\n",keyPathString];
+    
+    if (valueTansformeArray.count) {
+        NSString * valueTansFormerString = [[valueTansformeArray componentsJoinedByString:@"else "]stringByAppendingString:@"else{\n        return nil;\n    }\n"];
+        [modelM appendFormat:@"+ (NSValueTransformer *)JSONTransformerForKey:(NSString *)key{\n    %@\n}\n\n",valueTansFormerString];
+    }
+    
+    [modelM appendString:@"@end\n"];
+    
     return modelM;
 }
 

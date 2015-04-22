@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>instruction</key>
+	<string>用于描述文件功能</string>
+	<key>fileName</key>
+	<string>CAICient</string>
+	<key>interfaces</key>
+	<dict>
+		<key>interfaceName</key>
+		<dict>
+			<key>method</key>
+			<string>GET</string>
+			<key>path</key>
+			<string>/server</string>
+			<key>instruction</key>
+			<string>描述接口的说明</string>
+			<key>params</key>
+			<dict>
+				<key>page</key>
+				<dict>
+					<key>keyName</key>
+					<string>sss</string>
+					<key>instruction</key>
+					<string>页码</string>
+					<key>dataType</key>
+					<string>NSInteger</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>result</key>
+			<dict>
+				<key>dataType</key>
+				<string>CAIAppVersion</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

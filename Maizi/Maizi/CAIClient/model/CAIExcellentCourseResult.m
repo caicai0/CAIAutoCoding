@@ -11,13 +11,15 @@
 @implementation CAIExcellentCourseResult
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey{
-    return @{@"list":@"data.list"};
+    return @{
+             @"list":@"data.list"};
 }
 
 + (NSValueTransformer *)JSONTransformerForKey:(NSString *)key{
     if ([key isEqualToString:@"list"]) {
         return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:[CAICourse class]];
+    }else{
+        return nil;
     }
-    return nil;
 }
 @end

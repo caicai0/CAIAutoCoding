@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CAIAppVersion</key>
+	<dict>
+		<key>instruction</key>
+		<string>只是个例子</string>
+		<key>extend</key>
+		<string>MTLModel</string>
+		<key>property</key>
+		<dict>
+			<key>newCode</key>
+			<dict>
+				<key>serverName</key>
+				<string>new_code</string>
+				<key>dataType</key>
+				<string>NSInteger</string>
+				<key>automic</key>
+				<false/>
+				<key>contentDataType</key>
+				<string>NSObject</string>
+			</dict>
+		</dict>
+	</dict>
+</dict>
+</plist>

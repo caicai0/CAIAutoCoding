@@ -91,13 +91,20 @@ static dispatch_once_t onceToken;
     NSString * urlString = [self fullUrlStringWithUrlString:@"/service/getExcellentCourse/?client=ios&vno=2.0.0.3&orderBy=1&loadAd=1&pageSize=1000&page=1"];
     
     NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    if (params) {
+        [params setObject:params forKey:nil];
+    }else{
+        if (true) {
+            NSLog(@"%@参数缺失",params);
+        }
+    }
+    
     
     AFHTTPRequestOperation * op = [[CAINet shareClient]post:urlString parameters:params finish:^(NSDictionary *responsObject, NSError *error) {
         [self handleResponsObject:responsObject netError:error resultClass:[CAIExcellentCourseResult class] finish:finish];
     }];
     
     return op;
-
 }
 
 @end

@@ -17,7 +17,13 @@
 
 #pragma mark - 独立接口方法实现
 
-//精品课程
+/**
+ *  <#Description#>
+ *
+ *  @param finish <#finish description#>
+ *
+ *  @return <#return value description#>
+ */
 - (AFHTTPRequestOperation* )getExcellentCourseFinish:(void(^)(CAIExcellentCourseResult * result,NSError *error))finish;
 
 @end

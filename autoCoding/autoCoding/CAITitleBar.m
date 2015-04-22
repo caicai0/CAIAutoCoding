@@ -53,7 +53,6 @@
         [button setTitle:title forState:UIControlStateSelected];
         [button setTitleColor:self.selectedColor forState:UIControlStateSelected];
         [button setTitleColor:self.normalColor forState:UIControlStateNormal];
-        button.titleLabel 
     }
     
 }
