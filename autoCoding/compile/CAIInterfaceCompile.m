@@ -156,12 +156,12 @@
     [clientM appendFormat:@"//  Copyright (c) %ld年 %@. All rights reserved.\n//\n\n",[self.components year],self.fileDic[@"copyright"]];
     [clientM appendFormat:@"#import \"%@.h\"\n#import \"CAINet.h\"\n#import \"Mantle.h\"\n", self.clientDic[@"fileName"]];
     
-    [clientM appendFormat:@"\n@interface CAIClient ()\n\n@property (nonatomic,strong)NSString * baseUrlString;\n\n@end\n\n"];
+    [clientM appendFormat:@"\n@interface %@ ()\n\n@property (nonatomic,strong)NSString * baseUrlString;\n\n@end\n\n",self.clientDic[@"fileName"]];
     
     [clientM appendFormat:@"@implementation %@\n\n",self.clientDic[@"fileName"]];
     
     //基础函数
-    [clientM appendString:@"//单例部分\nstatic CAIClient *shareClient = nil;\nstatic dispatch_once_t onceToken;\n+(id)shareClient{\n    dispatch_once(&onceToken, ^{\n        shareClient = [[CAIClient alloc]init];\n    });\n    return shareClient;\n}\n\n//初始化\n- (instancetype)init\n{\n    self = [super init];\n    if (self) {\n        self.baseUrlString = @\"https://books.cn-healthcare.com/api.php\";\n        self.baseUrlString = @\"http://www.maiziedu.com/\";\n        \n    }\n    return self;\n}\n\n- (NSString *)fullUrlStringWithUrlString:(NSString *)urlString{\n    if (self.baseUrlString && ![urlString hasPrefix:@\"http://\"]&&![urlString hasPrefix:@\"https://\"]) {\n        return [self.baseUrlString stringByAppendingString:urlString];\n    }\n    return urlString;\n}\n\n- (NSString *)fullUrlStringWithBaseUrlString:(NSString *)baseUrlString subUrlString:(NSString *)subUrlString{\n    if (baseUrlString && ![subUrlString hasPrefix:@\"http://\"]&&![subUrlString hasPrefix:@\"https://\"]) {\n        return [baseUrlString stringByAppendingString:subUrlString];\n    }\n    return subUrlString;\n}\n\n#pragma mark - privateFounctions\n\n- (void)handleResponsObject:(NSDictionary *)dic netError:(NSError *)error resultClass:(Class)class finish:(void(^)(id result,NSError *error))finish{\n//    NSLog(@\" dic :%@\\n-------------------------------------\\n\",dic);\n//    NSLog(@\" error:%@\\n-------------------------------------\\n\",error);\n    if (error) {\n        if (finish) {\n            finish(nil,error);//网络连接错误\n        }\n    }else{\n        if ([class isSubclassOfClass:MTLModel.class]) {\n            NSError *adapterError = nil;\n            id list = [MTLJSONAdapter modelOfClass:class fromJSONDictionary:dic error:&adapterError];\n            if (error) {\n                if (finish) {\n                    finish(nil,error);//数据解析错误\n                }\n            }else{\n                if (finish) {\n                    finish(list,nil);\n                }\n            }\n        }else{\n            NSLog(@\"class:%@ 不是MTLModel.class 不能进行数据解析\",class);\n            if(finish){\n                finish(dic,nil);\n            }\n        }\n    }\n}\n\n#pragma mark - 接口实现代码\n\n"];
+    [clientM appendFormat:@"//单例部分\nstatic %@ *shareClient = nil;\nstatic dispatch_once_t onceToken;\n+(id)shareClient{\n    dispatch_once(&onceToken, ^{\n        shareClient = [[%@ alloc]init];\n    });\n    return shareClient;\n}\n\n//初始化\n- (instancetype)init\n{\n    self = [super init];\n    if (self) {\n        self.baseUrlString = @\"https://books.cn-healthcare.com/api.php\";\n        self.baseUrlString = @\"http://www.maiziedu.com/\";\n        \n    }\n    return self;\n}\n\n- (NSString *)fullUrlStringWithUrlString:(NSString *)urlString{\n    if (self.baseUrlString && ![urlString hasPrefix:@\"http://\"]&&![urlString hasPrefix:@\"https://\"]) {\n        return [self.baseUrlString stringByAppendingString:urlString];\n    }\n    return urlString;\n}\n\n- (NSString *)fullUrlStringWithBaseUrlString:(NSString *)baseUrlString subUrlString:(NSString *)subUrlString{\n    if (baseUrlString && ![subUrlString hasPrefix:@\"http://\"]&&![subUrlString hasPrefix:@\"https://\"]) {\n        return [baseUrlString stringByAppendingString:subUrlString];\n    }\n    return subUrlString;\n}\n\n#pragma mark - privateFounctions\n\n- (void)handleResponsObject:(NSDictionary *)dic netError:(NSError *)error resultClass:(Class)class finish:(void(^)(id result,NSError *error))finish{\n//    NSLog(@\" dic :%%@\\n-------------------------------------\\n\",dic);\n//    NSLog(@\" error:%%@\\n-------------------------------------\\n\",error);\n    if (error) {\n        if (finish) {\n            finish(nil,error);//网络连接错误\n        }\n    }else{\n        if ([class isSubclassOfClass:MTLModel.class]) {\n            NSError *adapterError = nil;\n            id list = [MTLJSONAdapter modelOfClass:class fromJSONDictionary:dic error:&adapterError];\n            if (error) {\n                if (finish) {\n                    finish(nil,error);//数据解析错误\n                }\n            }else{\n                if (finish) {\n                    finish(list,nil);\n                }\n            }\n        }else{\n            NSLog(@\"class:%%@ 不是MTLModel.class 不能进行数据解析\",class);\n            if(finish){\n                finish(dic,nil);\n            }\n        }\n    }\n}\n\n#pragma mark - 接口实现代码\n\n",self.clientDic[@"fileName"],self.clientDic[@"fileName"]];
     
     //接口实现部分
     NSDictionary *interfaceDic = self.clientDic[@"interfaces"];
@@ -189,13 +189,13 @@
             [functionNamePArray addObject:fP];
             
             if ([[self basicDataTypes]containsObject:dataType]) {
-                [judgmentArray addObject:[NSString stringWithFormat:@"    [params setObject:[NSString stringWithFormat:@\"%%@\",%@] forKey:%@];\n",paramName,key]];
+                [judgmentArray addObject:[NSString stringWithFormat:@"    [params setObject:[NSString stringWithFormat:@\"%@\",%@] forKey:@\"%@\"];\n",[self placeholderForDataType:dataType],paramName,key]];
             }else{
                 NSString * worningString = @"";
                 if (isRquired) {
                     worningString = [NSString stringWithFormat:@"NSLog(@\"%@参数缺失\");",paramName];
                 }
-                [judgmentArray addObject:[NSString stringWithFormat:@"if (%@) {\n        [params setObject:%@ forKey:%@];\n    }else{\n        %@\n        }\n    }",paramName,paramName,key,worningString]];
+                [judgmentArray addObject:[NSString stringWithFormat:@"if (%@) {\n        [params setObject:%@ forKey:@\"%@\"];\n    }else{\n        %@\n        }\n    }",paramName,paramName,key,worningString]];
             }
         }
         
@@ -269,6 +269,56 @@
              @"CGFloat",
              @"NSInteger"
              ];
+}
+
+- (NSString *)placeholderForDataType:(NSString *)dataType{
+    if ([dataType isEqualToString:@"char"]) {
+        return @"%c";
+    }
+    else if ([dataType isEqualToString:@"int"]) {
+        return @"%d";
+    }
+    else if ([dataType isEqualToString:@"short"]) {
+        return @"%d";
+    }
+    else if ([dataType isEqualToString:@"long"]) {
+        return @"%ld";
+    }
+    else if ([dataType isEqualToString:@"long long"]) {
+        return @"%lld";
+    }
+    else if ([dataType isEqualToString:@"unsigned char"]) {
+        return @"%uc";
+    }
+    else if ([dataType isEqualToString:@"unsigned int"]) {
+        return @"%ud";
+    }
+    else if ([dataType isEqualToString:@"unsigned short"]) {
+        return @"%d";
+    }
+    else if ([dataType isEqualToString:@"unsigned long"]) {
+        return @"%uld";
+    }
+    else if ([dataType isEqualToString:@"unsigned long long"]) {
+        return @"%ulld";
+    }
+    else if ([dataType isEqualToString:@"float"]) {
+        return @"%f";
+    }
+    else if ([dataType isEqualToString:@"double"]) {
+        return @"%f";
+    }
+    else if ([dataType isEqualToString:@"BOOL"]) {
+        return @"%d";
+    }
+    else if ([dataType isEqualToString:@"CGFloat"]) {
+        return @"%f";
+    }
+    else if ([dataType isEqualToString:@"NSInteger"]) {
+        return @"%ld";
+    }else{
+        return @"%@";
+    }
 }
 
 @end

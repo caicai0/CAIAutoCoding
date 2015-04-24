@@ -55,7 +55,24 @@
 		4B08F31D1AE76AD1003A3D0B /* MTLFMDBAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B08F2F11AE76AD1003A3D0B /* MTLFMDBAdapter.m */; };
 		4B08F31F1AE76AF5003A3D0B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B08F31E1AE76AF5003A3D0B /* libsqlite3.dylib */; };
 		4B08F3231AE770AD003A3D0B /* CAIInterfaceCompile.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B08F3221AE770AD003A3D0B /* CAIInterfaceCompile.m */; };
-		4B08F3261AE7A1C5003A3D0B /* CAICient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B08F3251AE7A1C5003A3D0B /* CAICient.m */; };
+		4B3AE8FC1AEA2210005C3B53 /* CLTFriend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8DD1AEA2210005C3B53 /* CLTFriend.m */; };
+		4B3AE8FD1AEA2210005C3B53 /* CLTGetOtherUserListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8DF1AEA2210005C3B53 /* CLTGetOtherUserListResult.m */; };
+		4B3AE8FE1AEA2210005C3B53 /* CLTGetRecommendResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8E11AEA2210005C3B53 /* CLTGetRecommendResult.m */; };
+		4B3AE8FF1AEA2210005C3B53 /* CLTGetStoryDetialResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8E31AEA2210005C3B53 /* CLTGetStoryDetialResult.m */; };
+		4B3AE9001AEA2210005C3B53 /* CLTGetStoryListResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8E51AEA2210005C3B53 /* CLTGetStoryListResult.m */; };
+		4B3AE9011AEA2210005C3B53 /* CLTGetUserInfoResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8E71AEA2210005C3B53 /* CLTGetUserInfoResult.m */; };
+		4B3AE9021AEA2210005C3B53 /* CLTNoDataRsult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8E91AEA2210005C3B53 /* CLTNoDataRsult.m */; };
+		4B3AE9031AEA2210005C3B53 /* CLTRecommend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8EB1AEA2210005C3B53 /* CLTRecommend.m */; };
+		4B3AE9041AEA2210005C3B53 /* CLTSearchUserId.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8ED1AEA2210005C3B53 /* CLTSearchUserId.m */; };
+		4B3AE9051AEA2210005C3B53 /* CLTSearchUserIdResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8EF1AEA2210005C3B53 /* CLTSearchUserIdResult.m */; };
+		4B3AE9061AEA2210005C3B53 /* CLTStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8F11AEA2210005C3B53 /* CLTStatus.m */; };
+		4B3AE9071AEA2210005C3B53 /* CLTStory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8F31AEA2210005C3B53 /* CLTStory.m */; };
+		4B3AE9081AEA2210005C3B53 /* CLTStoryDetial.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8F51AEA2210005C3B53 /* CLTStoryDetial.m */; };
+		4B3AE9091AEA2210005C3B53 /* CLTUploadImageResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8F71AEA2210005C3B53 /* CLTUploadImageResult.m */; };
+		4B3AE90A1AEA2210005C3B53 /* CLTUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8F91AEA2210005C3B53 /* CLTUserInfo.m */; };
+		4B3AE90B1AEA2210005C3B53 /* CLTUserPublish.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE8FB1AEA2210005C3B53 /* CLTUserPublish.m */; };
+		4B3AE90E1AEA2278005C3B53 /* CAINet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE90D1AEA2278005C3B53 /* CAINet.m */; };
+		4B3AE9111AEA2440005C3B53 /* CAIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B3AE9101AEA2440005C3B53 /* CAIClient.m */; };
 		4B49C0321AE0EB0F0074CCB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49C0311AE0EB0F0074CCB2 /* main.m */; };
 		4B49C0351AE0EB0F0074CCB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49C0341AE0EB0F0074CCB2 /* AppDelegate.m */; };
 		4B49C0381AE0EB0F0074CCB2 /* autoCoding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B49C0361AE0EB0F0074CCB2 /* autoCoding.xcdatamodeld */; };
@@ -197,8 +214,42 @@
 		4B08F3201AE76D40003A3D0B /* interface.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = interface.plist; sourceTree = "<group>"; };
 		4B08F3211AE770AD003A3D0B /* CAIInterfaceCompile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIInterfaceCompile.h; sourceTree = "<group>"; };
 		4B08F3221AE770AD003A3D0B /* CAIInterfaceCompile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIInterfaceCompile.m; sourceTree = "<group>"; };
-		4B08F3241AE7A1C5003A3D0B /* CAICient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAICient.h; sourceTree = "<group>"; };
-		4B08F3251AE7A1C5003A3D0B /* CAICient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAICient.m; sourceTree = "<group>"; };
+		4B3AE8DC1AEA2210005C3B53 /* CLTFriend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTFriend.h; sourceTree = "<group>"; };
+		4B3AE8DD1AEA2210005C3B53 /* CLTFriend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTFriend.m; sourceTree = "<group>"; };
+		4B3AE8DE1AEA2210005C3B53 /* CLTGetOtherUserListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTGetOtherUserListResult.h; sourceTree = "<group>"; };
+		4B3AE8DF1AEA2210005C3B53 /* CLTGetOtherUserListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTGetOtherUserListResult.m; sourceTree = "<group>"; };
+		4B3AE8E01AEA2210005C3B53 /* CLTGetRecommendResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTGetRecommendResult.h; sourceTree = "<group>"; };
+		4B3AE8E11AEA2210005C3B53 /* CLTGetRecommendResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTGetRecommendResult.m; sourceTree = "<group>"; };
+		4B3AE8E21AEA2210005C3B53 /* CLTGetStoryDetialResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTGetStoryDetialResult.h; sourceTree = "<group>"; };
+		4B3AE8E31AEA2210005C3B53 /* CLTGetStoryDetialResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTGetStoryDetialResult.m; sourceTree = "<group>"; };
+		4B3AE8E41AEA2210005C3B53 /* CLTGetStoryListResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTGetStoryListResult.h; sourceTree = "<group>"; };
+		4B3AE8E51AEA2210005C3B53 /* CLTGetStoryListResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTGetStoryListResult.m; sourceTree = "<group>"; };
+		4B3AE8E61AEA2210005C3B53 /* CLTGetUserInfoResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTGetUserInfoResult.h; sourceTree = "<group>"; };
+		4B3AE8E71AEA2210005C3B53 /* CLTGetUserInfoResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTGetUserInfoResult.m; sourceTree = "<group>"; };
+		4B3AE8E81AEA2210005C3B53 /* CLTNoDataRsult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTNoDataRsult.h; sourceTree = "<group>"; };
+		4B3AE8E91AEA2210005C3B53 /* CLTNoDataRsult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTNoDataRsult.m; sourceTree = "<group>"; };
+		4B3AE8EA1AEA2210005C3B53 /* CLTRecommend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTRecommend.h; sourceTree = "<group>"; };
+		4B3AE8EB1AEA2210005C3B53 /* CLTRecommend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTRecommend.m; sourceTree = "<group>"; };
+		4B3AE8EC1AEA2210005C3B53 /* CLTSearchUserId.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTSearchUserId.h; sourceTree = "<group>"; };
+		4B3AE8ED1AEA2210005C3B53 /* CLTSearchUserId.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTSearchUserId.m; sourceTree = "<group>"; };
+		4B3AE8EE1AEA2210005C3B53 /* CLTSearchUserIdResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTSearchUserIdResult.h; sourceTree = "<group>"; };
+		4B3AE8EF1AEA2210005C3B53 /* CLTSearchUserIdResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTSearchUserIdResult.m; sourceTree = "<group>"; };
+		4B3AE8F01AEA2210005C3B53 /* CLTStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTStatus.h; sourceTree = "<group>"; };
+		4B3AE8F11AEA2210005C3B53 /* CLTStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTStatus.m; sourceTree = "<group>"; };
+		4B3AE8F21AEA2210005C3B53 /* CLTStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTStory.h; sourceTree = "<group>"; };
+		4B3AE8F31AEA2210005C3B53 /* CLTStory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTStory.m; sourceTree = "<group>"; };
+		4B3AE8F41AEA2210005C3B53 /* CLTStoryDetial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTStoryDetial.h; sourceTree = "<group>"; };
+		4B3AE8F51AEA2210005C3B53 /* CLTStoryDetial.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTStoryDetial.m; sourceTree = "<group>"; };
+		4B3AE8F61AEA2210005C3B53 /* CLTUploadImageResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTUploadImageResult.h; sourceTree = "<group>"; };
+		4B3AE8F71AEA2210005C3B53 /* CLTUploadImageResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTUploadImageResult.m; sourceTree = "<group>"; };
+		4B3AE8F81AEA2210005C3B53 /* CLTUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTUserInfo.h; sourceTree = "<group>"; };
+		4B3AE8F91AEA2210005C3B53 /* CLTUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTUserInfo.m; sourceTree = "<group>"; };
+		4B3AE8FA1AEA2210005C3B53 /* CLTUserPublish.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLTUserPublish.h; sourceTree = "<group>"; };
+		4B3AE8FB1AEA2210005C3B53 /* CLTUserPublish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CLTUserPublish.m; sourceTree = "<group>"; };
+		4B3AE90C1AEA2278005C3B53 /* CAINet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAINet.h; sourceTree = "<group>"; };
+		4B3AE90D1AEA2278005C3B53 /* CAINet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAINet.m; sourceTree = "<group>"; };
+		4B3AE90F1AEA2440005C3B53 /* CAIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAIClient.h; sourceTree = "<group>"; };
+		4B3AE9101AEA2440005C3B53 /* CAIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAIClient.m; sourceTree = "<group>"; };
 		4B49C02C1AE0EB0F0074CCB2 /* autoCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = autoCoding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B49C0301AE0EB0F0074CCB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B49C0311AE0EB0F0074CCB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -265,8 +316,42 @@
 		4B08F2831AE76A1B003A3D0B /* model */ = {
 			isa = PBXGroup;
 			children = (
-				4B08F3241AE7A1C5003A3D0B /* CAICient.h */,
-				4B08F3251AE7A1C5003A3D0B /* CAICient.m */,
+				4B3AE90F1AEA2440005C3B53 /* CAIClient.h */,
+				4B3AE9101AEA2440005C3B53 /* CAIClient.m */,
+				4B3AE90C1AEA2278005C3B53 /* CAINet.h */,
+				4B3AE90D1AEA2278005C3B53 /* CAINet.m */,
+				4B3AE8DC1AEA2210005C3B53 /* CLTFriend.h */,
+				4B3AE8DD1AEA2210005C3B53 /* CLTFriend.m */,
+				4B3AE8DE1AEA2210005C3B53 /* CLTGetOtherUserListResult.h */,
+				4B3AE8DF1AEA2210005C3B53 /* CLTGetOtherUserListResult.m */,
+				4B3AE8E01AEA2210005C3B53 /* CLTGetRecommendResult.h */,
+				4B3AE8E11AEA2210005C3B53 /* CLTGetRecommendResult.m */,
+				4B3AE8E21AEA2210005C3B53 /* CLTGetStoryDetialResult.h */,
+				4B3AE8E31AEA2210005C3B53 /* CLTGetStoryDetialResult.m */,
+				4B3AE8E41AEA2210005C3B53 /* CLTGetStoryListResult.h */,
+				4B3AE8E51AEA2210005C3B53 /* CLTGetStoryListResult.m */,
+				4B3AE8E61AEA2210005C3B53 /* CLTGetUserInfoResult.h */,
+				4B3AE8E71AEA2210005C3B53 /* CLTGetUserInfoResult.m */,
+				4B3AE8E81AEA2210005C3B53 /* CLTNoDataRsult.h */,
+				4B3AE8E91AEA2210005C3B53 /* CLTNoDataRsult.m */,
+				4B3AE8EA1AEA2210005C3B53 /* CLTRecommend.h */,
+				4B3AE8EB1AEA2210005C3B53 /* CLTRecommend.m */,
+				4B3AE8EC1AEA2210005C3B53 /* CLTSearchUserId.h */,
+				4B3AE8ED1AEA2210005C3B53 /* CLTSearchUserId.m */,
+				4B3AE8EE1AEA2210005C3B53 /* CLTSearchUserIdResult.h */,
+				4B3AE8EF1AEA2210005C3B53 /* CLTSearchUserIdResult.m */,
+				4B3AE8F01AEA2210005C3B53 /* CLTStatus.h */,
+				4B3AE8F11AEA2210005C3B53 /* CLTStatus.m */,
+				4B3AE8F21AEA2210005C3B53 /* CLTStory.h */,
+				4B3AE8F31AEA2210005C3B53 /* CLTStory.m */,
+				4B3AE8F41AEA2210005C3B53 /* CLTStoryDetial.h */,
+				4B3AE8F51AEA2210005C3B53 /* CLTStoryDetial.m */,
+				4B3AE8F61AEA2210005C3B53 /* CLTUploadImageResult.h */,
+				4B3AE8F71AEA2210005C3B53 /* CLTUploadImageResult.m */,
+				4B3AE8F81AEA2210005C3B53 /* CLTUserInfo.h */,
+				4B3AE8F91AEA2210005C3B53 /* CLTUserInfo.m */,
+				4B3AE8FA1AEA2210005C3B53 /* CLTUserPublish.h */,
+				4B3AE8FB1AEA2210005C3B53 /* CLTUserPublish.m */,
 				4B08F2841AE76A1B003A3D0B /* CAIAppVersion.h */,
 				4B08F2851AE76A1B003A3D0B /* CAIAppVersion.m */,
 			);
@@ -660,12 +745,19 @@
 				4B08F3011AE76AD1003A3D0B /* UIRefreshControl+AFNetworking.m in Sources */,
 				4B08F2F71AE76AD1003A3D0B /* AFURLConnectionOperation.m in Sources */,
 				4B49C0381AE0EB0F0074CCB2 /* autoCoding.xcdatamodeld in Sources */,
+				4B3AE9071AEA2210005C3B53 /* CLTStory.m in Sources */,
 				4B08F3001AE76AD1003A3D0B /* UIProgressView+AFNetworking.m in Sources */,
 				4B08F31A1AE76AD1003A3D0B /* NSValueTransformer+MTLPredefinedTransformerAdditions.m in Sources */,
+				4B3AE8FD1AEA2210005C3B53 /* CLTGetOtherUserListResult.m in Sources */,
+				4B3AE9011AEA2210005C3B53 /* CLTGetUserInfoResult.m in Sources */,
+				4B3AE9081AEA2210005C3B53 /* CLTStoryDetial.m in Sources */,
 				4B49C0351AE0EB0F0074CCB2 /* AppDelegate.m in Sources */,
 				4B08F3051AE76AD1003A3D0B /* FMDatabase+InMemoryOnDiskIO.m in Sources */,
+				4B3AE8FF1AEA2210005C3B53 /* CLTGetStoryDetialResult.m in Sources */,
 				4B08F3191AE76AD1003A3D0B /* NSValueTransformer+MTLInversionAdditions.m in Sources */,
 				4B08F30C1AE76AD1003A3D0B /* EXTRuntimeExtensions.m in Sources */,
+				4B3AE9061AEA2210005C3B53 /* CLTStatus.m in Sources */,
+				4B3AE9031AEA2210005C3B53 /* CLTRecommend.m in Sources */,
 				4B08F2FD1AE76AD1003A3D0B /* UIAlertView+AFNetworking.m in Sources */,
 				4B08F3101AE76AD1003A3D0B /* MTLManagedObjectAdapter.m in Sources */,
 				4B6858FE1AE4F01100155ED9 /* CAITitleBar.m in Sources */,
@@ -676,18 +768,25 @@
 				4B08F3141AE76AD1003A3D0B /* MTLValueTransformer.m in Sources */,
 				4B6858FB1AE4EFCD00155ED9 /* demoViewController.m in Sources */,
 				4B08F2FC1AE76AD1003A3D0B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				4B3AE9111AEA2440005C3B53 /* CAIClient.m in Sources */,
+				4B3AE8FC1AEA2210005C3B53 /* CLTFriend.m in Sources */,
+				4B3AE9091AEA2210005C3B53 /* CLTUploadImageResult.m in Sources */,
 				4B08F3091AE76AD1003A3D0B /* FMDatabasePool.m in Sources */,
 				4B08F3151AE76AD1003A3D0B /* NSArray+MTLManipulationAdditions.m in Sources */,
 				4B08F3131AE76AD1003A3D0B /* MTLReflection.m in Sources */,
 				4B08F2F81AE76AD1003A3D0B /* AFURLRequestSerialization.m in Sources */,
+				4B3AE9001AEA2210005C3B53 /* CLTGetStoryListResult.m in Sources */,
 				4B08F2FB1AE76AD1003A3D0B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				4B08F3121AE76AD1003A3D0B /* MTLModel.m in Sources */,
 				4B08F30F1AE76AD1003A3D0B /* MTLJSONAdapter.m in Sources */,
+				4B3AE90E1AEA2278005C3B53 /* CAINet.m in Sources */,
 				4B08F2F61AE76AD1003A3D0B /* AFSecurityPolicy.m in Sources */,
+				4B3AE9021AEA2210005C3B53 /* CLTNoDataRsult.m in Sources */,
 				4B08F31C1AE76AD1003A3D0B /* CAISection.m in Sources */,
 				4B08F2F21AE76AD1003A3D0B /* AFHTTPRequestOperation.m in Sources */,
 				4B08F2FA1AE76AD1003A3D0B /* AFURLSessionManager.m in Sources */,
 				4B08F3111AE76AD1003A3D0B /* MTLModel+NSCoding.m in Sources */,
+				4B3AE9051AEA2210005C3B53 /* CLTSearchUserIdResult.m in Sources */,
 				4B08F3181AE76AD1003A3D0B /* NSObject+MTLComparisonAdditions.m in Sources */,
 				4B08F3171AE76AD1003A3D0B /* NSError+MTLModelException.m in Sources */,
 				4B08F3041AE76AD1003A3D0B /* FMTokenizers.m in Sources */,
@@ -699,12 +798,15 @@
 				4B08F30A1AE76AD1003A3D0B /* FMDatabaseQueue.m in Sources */,
 				4B49C0321AE0EB0F0074CCB2 /* main.m in Sources */,
 				4B08F3021AE76AD1003A3D0B /* UIWebView+AFNetworking.m in Sources */,
+				4B3AE8FE1AEA2210005C3B53 /* CLTGetRecommendResult.m in Sources */,
+				4B3AE9041AEA2210005C3B53 /* CLTSearchUserId.m in Sources */,
 				4B08F2F51AE76AD1003A3D0B /* AFNetworkReachabilityManager.m in Sources */,
-				4B08F3261AE7A1C5003A3D0B /* CAICient.m in Sources */,
 				4B08F2FF1AE76AD1003A3D0B /* UIImageView+AFNetworking.m in Sources */,
 				4B08F3161AE76AD1003A3D0B /* NSDictionary+MTLManipulationAdditions.m in Sources */,
 				4B08F30B1AE76AD1003A3D0B /* FMResultSet.m in Sources */,
 				4B08F2F31AE76AD1003A3D0B /* AFHTTPRequestOperationManager.m in Sources */,
+				4B3AE90B1AEA2210005C3B53 /* CLTUserPublish.m in Sources */,
+				4B3AE90A1AEA2210005C3B53 /* CLTUserInfo.m in Sources */,
 				4B08F31D1AE76AD1003A3D0B /* MTLFMDBAdapter.m in Sources */,
 				4B08F3081AE76AD1003A3D0B /* FMDatabaseAdditions.m in Sources */,
 			);
@@ -919,6 +1021,7 @@
 				4B08F2761AE74FC3003A3D0B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4B49C0271AE0EB0F0074CCB2 /* Build configuration list for PBXProject "autoCoding" */ = {
 			isa = XCConfigurationList;

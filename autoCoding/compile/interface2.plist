@@ -5,7 +5,7 @@
 	<key>instruction</key>
 	<string>用于描述文件功能</string>
 	<key>fileName</key>
-	<string>CAIClient</string>
+	<string>CAICient</string>
 	<key>interfaces</key>
 	<dict>
 		<key>interfaceName</key>

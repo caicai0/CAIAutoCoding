@@ -1,7 +1,7 @@
 //
-//  CAICient.h
+//  CAIClient.h
 //
-//  Created by CAI on 2015/4/22
+//  Created by CAI on 2015/4/24
 //  Copyright (c) 2015年 CAI. All rights reserved.
 //
 
@@ -13,10 +13,10 @@
 #import "AFNetworking.h"
 #import "CAIAppVersion.h"
 
-@interface CAICient : NSObject
+@interface CAIClient : NSObject
 
 //单例
-+ (CAICient *)shareClient;
++ (CAIClient *)shareClient;
 
 #pragma mark - 独立接口方法实现
 

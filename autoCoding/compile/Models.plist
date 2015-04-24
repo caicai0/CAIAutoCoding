@@ -25,3 +25,34 @@
 	</dict>
 </dict>
 </plist>
+
+
+	<key>CLTNoDataRsult</key>
+	<dict>
+		<key>instruction</key>
+		<string>没有数据或是数据为空的返回数据结构</string>
+		<key>extend</key>
+		<string>MTLModel</string>
+		<key>property</key>
+		<dict>
+			<key>status</key>
+			<dict>
+				<key>serverName</key>
+				<string>status</string>
+				<key>dataType</key>
+				<string>CLTStatus</string>
+				<key>automic</key>
+				<false/>
+			</dict>
+
+			<key>data</key>
+			<dict>
+				<key>serverName</key>
+				<string>data</string>
+				<key>dataType</key>
+				<string>NSDictionary</string>
+				<key>automic</key>
+				<false/>
+			</dict>
+		</dict>
+	</dict>

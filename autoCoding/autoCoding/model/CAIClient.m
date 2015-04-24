@@ -1,11 +1,11 @@
 //
-//  CAICient.m
+//  CAIClient.m
 //
-//  Created by CAI on 2015/4/22
+//  Created by CAI on 2015/4/24
 //  Copyright (c) 2015年 CAI. All rights reserved.
 //
 
-#import "CAICient.h"
+#import "CAIClient.h"
 #import "CAINet.h"
 #import "Mantle.h"
 
@@ -15,7 +15,7 @@
 
 @end
 
-@implementation CAICient
+@implementation CAIClient
 
 //单例部分
 static CAIClient *shareClient = nil;
@@ -91,7 +91,7 @@ static dispatch_once_t onceToken;
     NSString * urlString = [self fullUrlStringWithUrlString:@"/server"];
     NSMutableDictionary * params = [NSMutableDictionary dictionary];
 
-    [params setObject:[NSString stringWithFormat:@"%@",page] forKey:sss];
+    [params setObject:[NSString stringWithFormat:@"%ld",page] forKey:@"sss"];
     AFHTTPRequestOperation * op = [[CAINet shareClient]get:urlString parameters:params finish:^(NSDictionary *responsObject, NSError *error) {
         [self handleResponsObject:responsObject netError:error resultClass:[CAIAppVersion class] finish:finish];
     }];

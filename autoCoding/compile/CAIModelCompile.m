@@ -23,7 +23,7 @@
 {
     self = [super init];
     if (self) {
-        NSString * modelPath = @"/Users/liyufeng/git/github/CAIAutoCoding/autoCoding/compile/Models.plist";
+        NSString * modelPath = @"/Users/liyufeng/git/github/CAIAutoCoding/autoCoding/compile/Models2.plist";
         NSString * filePath = @"/Users/liyufeng/git/github/CAIAutoCoding/autoCoding/compile/file.plist";
         self.outPutPath = @"/Users/liyufeng/git/github/CAIAutoCoding/autoCoding/autoCoding/model";
         
@@ -79,27 +79,34 @@
         [modelH appendFormat:@"/* \n     %@\n*/\n",instruction];
     }
     
-    NSMutableString * importString = [NSMutableString string];
+    NSMutableArray * importArray = [NSMutableArray array];
     NSMutableString * propertiesString = [NSMutableString string];
     
-    [importString appendString:@"#import \"Mantle.h\"\n"];
+    [importArray addObject:@"#import \"Mantle.h\""];
     
     NSDictionary *propertiesDic = model[@"property"];
     for (NSString * propertyName in propertiesDic.allKeys) {
         NSDictionary * property = propertiesDic[propertyName];
         NSString * dataType = property[@"dataType"];
         BOOL automic = [property[@"automic"]boolValue];
+        NSString * contentDataType = property[@"contentDataType"];
         
         NSString *automicS = automic?@"automic":@"nonatomic";
-        [propertiesString appendFormat:@"@property (%@, %@)%@ %@;\n",automicS,[self retainModeFroDataType:dataType],dataType,propertyName];
+        NSString *star = [[self basicDataTypes]containsObject:dataType]?@"":@"*";
+        [propertiesString appendFormat:@"@property (%@, %@)%@ %@%@;\n",automicS,[self retainModeFroDataType:dataType],dataType,star,propertyName];
         
         if ([self.modelDic.allKeys containsObject:dataType]) {
-            [importString appendFormat:@"#import \"%@.h\"\n",dataType];
+            [self addDataType:dataType toImportArray:importArray];
+        }
+        if ([self.modelDic.allKeys containsObject:contentDataType]) {
+            [self addDataType:contentDataType toImportArray:importArray];
         }
     }
     
+    NSString * importString = [importArray componentsJoinedByString:@"\n"];
+    
     [modelH appendFormat:@"\n"];
-    [modelH appendString:importString];
+    [modelH appendFormat:@"%@\n",importString];
     [modelH appendString:@"\n"];
     
     if (!extend) {
@@ -114,6 +121,13 @@
     [modelH appendString:@"\n"];
     [modelH appendFormat:@"@end\n"];
     return modelH;
+}
+
+- (void)addDataType:(NSString *)dataType toImportArray:(NSMutableArray *)importArray{
+    NSString * importS = [NSString stringWithFormat:@"#import \"%@.h\"",dataType];
+    if (![importArray containsObject:importS]) {
+        [importArray addObject:importS];
+    }
 }
 
 - (NSMutableString*)writeMforModel:(NSString *)modelName{
