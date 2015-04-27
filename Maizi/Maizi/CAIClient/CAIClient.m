@@ -92,7 +92,6 @@ static dispatch_once_t onceToken;
     
     NSMutableDictionary * params = [NSMutableDictionary dictionary];
     if (params) {
-        [params setObject:params forKey:nil];
     }else{
         if (true) {
             NSLog(@"%@参数缺失",params);
@@ -102,6 +101,42 @@ static dispatch_once_t onceToken;
     
     AFHTTPRequestOperation * op = [[CAINet shareClient]post:urlString parameters:params finish:^(NSDictionary *responsObject, NSError *error) {
         [self handleResponsObject:responsObject netError:error resultClass:[CAIExcellentCourseResult class] finish:finish];
+    }];
+    
+    return op;
+}
+
+- (AFHTTPRequestOperation *)getCarerrCourseFinish:(void(^)(CAICareerCourseResult *result, NSError *error))finish{
+    NSString * urlString = [self fullUrlStringWithUrlString:@"/service/getCareerCourse/?client=ios&vno=2.0.0.3"];
+    
+    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    if (params) {
+    }else{
+        if (true) {
+            NSLog(@"%@参数缺失",params);
+        }
+    }
+    
+    AFHTTPRequestOperation * op = [[CAINet shareClient]post:urlString parameters:params finish:^(NSDictionary *responsObject, NSError *error) {
+        [self handleResponsObject:responsObject netError:error resultClass:[CAICareerCourseResult class] finish:finish];
+    }];
+    
+    return op;
+}
+
+- (AFHTTPRequestOperation *)getCareerDetailWithCareerId:(NSString *)careerId finish:(void(^)(CAICareerDetailResult * result, NSError * error))finish{
+    NSString * urlString = [self fullUrlStringWithUrlString:@"/service/getCareerDetail/?client=ios&vno=2.0.0.3"];
+    
+    NSMutableDictionary * params = [NSMutableDictionary dictionary];
+    [params setObject:careerId forKey:@"careerId"];
+    if (params) {
+    }else{
+        if (true) {
+            NSLog(@"%@参数缺失",params);
+        }
+    }
+    AFHTTPRequestOperation * op = [[CAINet shareClient]post:urlString parameters:params finish:^(NSDictionary *responsObject, NSError *error) {
+        [self handleResponsObject:responsObject netError:error resultClass:[CAICareerDetailResult class] finish:finish];
     }];
     
     return op;

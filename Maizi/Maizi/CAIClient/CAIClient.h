@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "AFNetworking.h"
 #import "CAIExcellentCourseResult.h"
+#import "CAICareerCourseResult.h"
+#import "CAICareerDetailResult.h"
 
 @interface CAIClient : NSObject
 
@@ -26,4 +28,7 @@
  */
 - (AFHTTPRequestOperation* )getExcellentCourseFinish:(void(^)(CAIExcellentCourseResult * result,NSError *error))finish;
 
+- (AFHTTPRequestOperation *)getCarerrCourseFinish:(void(^)(CAICareerCourseResult *result, NSError *error))finish;
+
+- (AFHTTPRequestOperation *)getCareerDetailWithCareerId:(NSString *)careerId finish:(void(^)(CAICareerDetailResult * result, NSError * error))finish;
 @end
