@@ -88,6 +88,7 @@
 		4B9605F91AEE1C180024D2CE /* CAICareerDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9605F81AEE1C180024D2CE /* CAICareerDetail.m */; };
 		4B9605FC1AEE213E0024D2CE /* CAICareerDetailResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9605FB1AEE213E0024D2CE /* CAICareerDetailResult.m */; };
 		4B9605FF1AEE31FC0024D2CE /* CAICareerCourse.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B9605FE1AEE31FC0024D2CE /* CAICareerCourse.m */; };
+		4BCF387B1B035CCB00E26F84 /* courceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BCF387A1B035CCB00E26F84 /* courceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,6 +268,8 @@
 		4B9605FB1AEE213E0024D2CE /* CAICareerDetailResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAICareerDetailResult.m; sourceTree = "<group>"; };
 		4B9605FD1AEE31FC0024D2CE /* CAICareerCourse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAICareerCourse.h; sourceTree = "<group>"; };
 		4B9605FE1AEE31FC0024D2CE /* CAICareerCourse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAICareerCourse.m; sourceTree = "<group>"; };
+		4BCF38791B035CCB00E26F84 /* courceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = courceViewController.h; sourceTree = "<group>"; };
+		4BCF387A1B035CCB00E26F84 /* courceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = courceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -591,6 +594,8 @@
 				4B96059E1AEE02450024D2CE /* CareerCourseViewController.m */,
 				4B9605F11AEE16340024D2CE /* CareerDetailViewController.h */,
 				4B9605F21AEE16340024D2CE /* CareerDetailViewController.m */,
+				4BCF38791B035CCB00E26F84 /* courceViewController.h */,
+				4BCF387A1B035CCB00E26F84 /* courceViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -818,6 +823,7 @@
 				4B9605E11AEE08B80024D2CE /* SDWebImageManager.m in Sources */,
 				4B08F2631AE64362003A3D0B /* CAIClient.m in Sources */,
 				4B08F2451AE64253003A3D0B /* FMDatabaseQueue.m in Sources */,
+				4BCF387B1B035CCB00E26F84 /* courceViewController.m in Sources */,
 				4B9605E21AEE08B80024D2CE /* SDWebImagePrefetcher.m in Sources */,
 				4B9605FC1AEE213E0024D2CE /* CAICareerDetailResult.m in Sources */,
 			);

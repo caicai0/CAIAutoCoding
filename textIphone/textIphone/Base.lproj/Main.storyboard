@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="icK-Tn-itq">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Net Work View Controller-->
+        <scene sceneID="lJz-Td-swT">
+            <objects>
+                <viewController id="IPb-pQ-QRM" customClass="netWorkViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OLD-3N-fiL"/>
+                        <viewControllerLayoutGuide type="bottom" id="a0k-mT-Qnh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zn9-Zo-n04">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mRJ-tH-t7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="646" y="985"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="OOt-p3-Z7Y">
+            <objects>
+                <viewController id="icK-Tn-itq" customClass="tableViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gXm-wW-6Fp"/>
+                        <viewControllerLayoutGuide type="bottom" id="iwq-yj-HeT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="O8a-fb-Mln">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="79" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9xB-RL-uUM">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <slider key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" id="B5f-Bs-MKj">
+                                    <rect key="frame" x="0.0" y="-15" width="600" height="31"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </slider>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="79" id="b8V-yH-525" customClass="xibTableViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="b8V-yH-525" id="JPM-nt-UTK">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="9xB-RL-uUM" secondAttribute="trailing" id="CC2-Tm-5xh"/>
+                            <constraint firstItem="iwq-yj-HeT" firstAttribute="top" secondItem="9xB-RL-uUM" secondAttribute="bottom" id="JEx-qP-ji1"/>
+                            <constraint firstItem="9xB-RL-uUM" firstAttribute="leading" secondItem="O8a-fb-Mln" secondAttribute="leading" id="Nqh-bh-7K2"/>
+                            <constraint firstItem="9xB-RL-uUM" firstAttribute="top" secondItem="O8a-fb-Mln" secondAttribute="top" id="eH5-uw-rXu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="slider" destination="B5f-Bs-MKj" id="8LA-p9-FeI"/>
+                        <outlet property="tableView" destination="9xB-RL-uUM" id="pIe-PE-rt0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nmH-hH-fz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="606" y="1657"/>
+        </scene>
+    </scenes>
+</document>

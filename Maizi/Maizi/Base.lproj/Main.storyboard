@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BiI-L4-gTD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BiI-L4-gTD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
         <!--麦子学院-->
@@ -36,6 +36,7 @@
                     <navigationItem key="navigationItem" title="麦子学院" id="43c-eV-FcP"/>
                     <connections>
                         <outlet property="tableView" destination="OF4-sH-2IQ" id="cuy-XV-2Fa"/>
+                        <segue destination="hf4-S7-Shz" kind="push" id="xuK-H4-ZuV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8N-Of-kGr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -113,11 +114,50 @@
                     <navigationItem key="navigationItem" id="HUb-IL-dLT"/>
                     <connections>
                         <outlet property="tableView" destination="m8r-vO-8l0" id="k5l-hM-Og1"/>
+                        <segue destination="hf4-S7-Shz" kind="push" id="TaP-QI-KN0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqM-gL-6JW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1356" y="327"/>
+        </scene>
+        <!--Cource View Controller-->
+        <scene sceneID="N7q-X7-xyR">
+            <objects>
+                <viewController id="hf4-S7-Shz" customClass="courceViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jlS-c4-L7T"/>
+                        <viewControllerLayoutGuide type="bottom" id="lIK-Tw-aHi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gqU-1K-awm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8cv-TK-MDd">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="hf4-S7-Shz" id="j15-Wg-vpc"/>
+                                    <outlet property="delegate" destination="hf4-S7-Shz" id="gd2-nd-dj6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="8cv-TK-MDd" secondAttribute="bottom" id="T9a-Gu-G9P"/>
+                            <constraint firstItem="8cv-TK-MDd" firstAttribute="top" secondItem="gqU-1K-awm" secondAttribute="top" id="adc-0f-A4W"/>
+                            <constraint firstAttribute="trailing" secondItem="8cv-TK-MDd" secondAttribute="trailing" id="bQC-9p-1qI"/>
+                            <constraint firstItem="8cv-TK-MDd" firstAttribute="leading" secondItem="gqU-1K-awm" secondAttribute="leading" id="d2f-bm-jLg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="LmR-Vt-AeV"/>
+                    <connections>
+                        <outlet property="tableView" destination="8cv-TK-MDd" id="daU-QU-5Pu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SAQ-Yo-p7E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2076" y="-450"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="82W-Sk-zSV">
@@ -174,4 +214,7 @@
             <point key="canvasLocation" x="-15" y="327"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xuK-H4-ZuV"/>
+    </inferredMetricsTieBreakers>
 </document>
