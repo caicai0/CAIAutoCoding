@@ -3,29 +3,77 @@
 <plist version="1.0">
 <dict>
 	<key>instruction</key>
-	<string>用于描述文件功能</string>
+	<string>新面孔项目的所有接口</string>
 	<key>fileName</key>
 	<string>CAICient</string>
 	<key>interfaces</key>
 	<dict>
-		<key>interfaceName</key>
+		<key>userRegister</key>
 		<dict>
 			<key>method</key>
-			<string>GET</string>
+			<string>POST</string>
 			<key>path</key>
-			<string>/server</string>
+			<string>?c=user&a=register</string>
 			<key>instruction</key>
-			<string>描述接口的说明</string>
+			<string>1.1 用户注册接口</string>
 			<key>params</key>
 			<dict>
-				<key>page</key>
+				<key>account</key>
 				<dict>
 					<key>keyName</key>
-					<string>sss</string>
+					<string>account</string>
 					<key>instruction</key>
-					<string>页码</string>
+					<string>账户名称</string>
 					<key>dataType</key>
-					<string>NSInteger</string>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>password</key>
+				<dict>
+					<key>keyName</key>
+					<string>password</string>
+					<key>instruction</key>
+					<string>账户密码</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>photo</key>
+				<dict>
+					<key>keyName</key>
+					<string>photo</string>
+					<key>instruction</key>
+					<string>用户头像</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>nickName</key>
+				<dict>
+					<key>keyName</key>
+					<string>nickname</string>
+					<key>instruction</key>
+					<string>用户昵称</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+				
+				<key>nickName</key>
+				<dict>
+					<key>keyName</key>
+					<string>ip</string>
+					<key>instruction</key>
+					<string>用户ip，通过ip获取城市</string>
+					<key>dataType</key>
+					<string>NSString</string>
 					<key>isRquired</key>
 					<true/>
 				</dict>
@@ -33,7 +81,440 @@
 			<key>result</key>
 			<dict>
 				<key>dataType</key>
-				<string>CAIAppVersion</string>
+				<string>CLTNoDataResult</string>
+			</dict>
+		</dict>
+
+		<key>userLogin</key>
+		<dict>
+			<key>method</key>
+			<string>POST</string>
+			<key>path</key>
+			<string>?c=user&a=login</string>
+			<key>instruction</key>
+			<string>1.2 用户登录接口   为客户端提供用户登录功能</string>
+			<key>params</key>
+			<dict>
+				<key>account</key>
+				<dict>
+					<key>keyName</key>
+					<string>account</string>
+					<key>instruction</key>
+					<string>账户名称</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>password</key>
+				<dict>
+					<key>keyName</key>
+					<string>password</string>
+					<key>instruction</key>
+					<string>账户密码</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>result</key>
+			<dict>
+				<key>dataType</key>
+				<string>CLTNoDataResult</string>
+			</dict>
+		</dict>
+
+		<key>userImprove</key>
+		<dict>
+			<key>method</key>
+			<string>POST</string>
+			<key>path</key>
+			<string>?c=user&a=improve</string>
+			<key>instruction</key>
+			<string>1.3 用户资料完善接口   用户注册后，完善用户资料，包括性别、年龄、学校、专业、年级、职业信息以及个人简介等信息</string>
+			<key>params</key>
+			<dict>
+				<key>uid</key>
+				<dict>
+					<key>keyName</key>
+					<string>uid</string>
+					<key>instruction</key>
+					<string>用户ID</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>iCan</key>
+				<dict>
+					<key>keyName</key>
+					<string>iCan</string>
+					<key>instruction</key>
+					<string>我会做的事</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>gender</key>
+				<dict>
+					<key>keyName</key>
+					<string>gender</string>
+					<key>instruction</key>
+					<string>性别</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>age</key>
+				<dict>
+					<key>keyName</key>
+					<string>age</string>
+					<key>instruction</key>
+					<string>年龄</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>school</key>
+				<dict>
+					<key>keyName</key>
+					<string>school</string>
+					<key>instruction</key>
+					<string>学校</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>majorIn</key>
+				<dict>
+					<key>keyName</key>
+					<string>majorIn</string>
+					<key>instruction</key>
+					<string>专业</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>grade</key>
+				<dict>
+					<key>keyName</key>
+					<string>grade</string>
+					<key>instruction</key>
+					<string>年级</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>career</key>
+				<dict>
+					<key>keyName</key>
+					<string>career</string>
+					<key>instruction</key>
+					<string>职业</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>goodAt</key>
+				<dict>
+					<key>keyName</key>
+					<string>goodAt</string>
+					<key>instruction</key>
+					<string>擅长</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>character</key>
+				<dict>
+					<key>keyName</key>
+					<string>character</string>
+					<key>instruction</key>
+					<string>性格</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>instest</key>
+				<dict>
+					<key>keyName</key>
+					<string>instest</string>
+					<key>instruction</key>
+					<string>兴趣</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>profile</key>
+				<dict>
+					<key>keyName</key>
+					<string>profile</string>
+					<key>instruction</key>
+					<string>个人简介</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>result</key>
+			<dict>
+				<key>dataType</key>
+				<string>CLTNoDataResult</string>
+			</dict>
+		</dict>
+
+		<key>userNeed</key>
+		<dict>
+			<key>method</key>
+			<string>POST</string>
+			<key>path</key>
+			<string>?c=user&a=need</string>
+			<key>instruction</key>
+			<string>1.4.1 接口描述    用户填写喜欢的类型，包括性别、年龄、学校、专业、年级、职业信息以及个人简介等信息</string>
+			<key>params</key>
+			<dict>
+				<key>uid</key>
+				<dict>
+					<key>keyName</key>
+					<string>uid</string>
+					<key>instruction</key>
+					<string>用户ID</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>gender</key>
+				<dict>
+					<key>keyName</key>
+					<string>gender</string>
+					<key>instruction</key>
+					<string>性别</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>age</key>
+				<dict>
+					<key>keyName</key>
+					<string>age</string>
+					<key>instruction</key>
+					<string>年龄</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>school</key>
+				<dict>
+					<key>keyName</key>
+					<string>school</string>
+					<key>instruction</key>
+					<string>学校</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>majorIn</key>
+				<dict>
+					<key>keyName</key>
+					<string>majorIn</string>
+					<key>instruction</key>
+					<string>专业</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>grade</key>
+				<dict>
+					<key>keyName</key>
+					<string>grade</string>
+					<key>instruction</key>
+					<string>年级</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>career</key>
+				<dict>
+					<key>keyName</key>
+					<string>career</string>
+					<key>instruction</key>
+					<string>职业</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>goodAt</key>
+				<dict>
+					<key>keyName</key>
+					<string>goodAt</string>
+					<key>instruction</key>
+					<string>擅长</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>character</key>
+				<dict>
+					<key>keyName</key>
+					<string>character</string>
+					<key>instruction</key>
+					<string>性格</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>instest</key>
+				<dict>
+					<key>keyName</key>
+					<string>instest</string>
+					<key>instruction</key>
+					<string>兴趣</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>city</key>
+				<dict>
+					<key>keyName</key>
+					<string>city</string>
+					<key>instruction</key>
+					<string>城市</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>height</key>
+				<dict>
+					<key>keyName</key>
+					<string>height</string>
+					<key>instruction</key>
+					<string>身高</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>weight</key>
+				<dict>
+					<key>keyName</key>
+					<string>weight</string>
+					<key>instruction</key>
+					<string>体重</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>result</key>
+			<dict>
+				<key>dataType</key>
+				<string>CLTNoDataResult</string>
+			</dict>
+		</dict>
+
+		<key>userInfo</key>
+		<dict>
+			<key>method</key>
+			<string>POST</string>
+			<key>path</key>
+			<string>?c=user&a=info</string>
+			<key>instruction</key>
+			<string>1.2 用户登录接口   为客户端提供用户登录功能</string>
+			<key>params</key>
+			<dict>
+				<key>userId</key>
+				<dict>
+					<key>keyName</key>
+					<string>用户id</string>
+					<key>instruction</key>
+					<string>账户名称</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>result</key>
+			<dict>
+				<key>dataType</key>
+				<string>CLTUserInfo</string>
+			</dict>
+		</dict>
+
+		<key>recommendIndex</key>
+		<dict>
+			<key>method</key>
+			<string>POST</string>
+			<key>path</key>
+			<string>?c=recommend&a=index</string>
+			<key>instruction</key>
+			<string>2.1 为用户推荐图文接口   客户端调用此接口为用户推荐图文</string>
+			<key>params</key>
+			<dict>
+				<key>userId</key>
+				<dict>
+					<key>keyName</key>
+					<string>用户id</string>
+					<key>instruction</key>
+					<string>账户名称</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>result</key>
+			<dict>
+				<key>dataType</key>
+				<string>CLTNoDataResult</string>
 			</dict>
 		</dict>
 	</dict>

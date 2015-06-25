@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  FileViewController.h
 //  autoCoding
 //
-//  Created by liyufeng on 15/4/17.
+//  Created by 李玉峰 on 15/6/25.
 //  Copyright (c) 2015年 liyufeng. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface FileViewController : UIViewController
 
 @end
-

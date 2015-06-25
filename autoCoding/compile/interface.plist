@@ -39,3 +39,45 @@
 	</dict>
 </dict>
 </plist>
+
+
+		<key>userLogin</key>
+		<dict>
+			<key>method</key>
+			<string>POST</string>
+			<key>path</key>
+			<string>?c=user&a=login</string>
+			<key>instruction</key>
+			<string>1.2 用户登录接口   为客户端提供用户登录功能</string>
+			<key>params</key>
+			<dict>
+				<key>account</key>
+				<dict>
+					<key>keyName</key>
+					<string>account</string>
+					<key>instruction</key>
+					<string>账户名称</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+
+				<key>password</key>
+				<dict>
+					<key>keyName</key>
+					<string>password</string>
+					<key>instruction</key>
+					<string>账户密码</string>
+					<key>dataType</key>
+					<string>NSString</string>
+					<key>isRquired</key>
+					<true/>
+				</dict>
+			</dict>
+			<key>result</key>
+			<dict>
+				<key>dataType</key>
+				<string>CLTNoDataResult</string>
+			</dict>
+		</dict>

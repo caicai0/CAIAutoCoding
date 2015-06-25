@@ -76,7 +76,6 @@
 		4B49C0321AE0EB0F0074CCB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49C0311AE0EB0F0074CCB2 /* main.m */; };
 		4B49C0351AE0EB0F0074CCB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49C0341AE0EB0F0074CCB2 /* AppDelegate.m */; };
 		4B49C0381AE0EB0F0074CCB2 /* autoCoding.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4B49C0361AE0EB0F0074CCB2 /* autoCoding.xcdatamodeld */; };
-		4B49C03B1AE0EB0F0074CCB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B49C03A1AE0EB0F0074CCB2 /* ViewController.m */; };
 		4B49C03E1AE0EB0F0074CCB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B49C03C1AE0EB0F0074CCB2 /* Main.storyboard */; };
 		4B49C0401AE0EB0F0074CCB2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B49C03F1AE0EB0F0074CCB2 /* Images.xcassets */; };
 		4B49C0431AE0EB0F0074CCB2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B49C0411AE0EB0F0074CCB2 /* LaunchScreen.xib */; };
@@ -85,6 +84,11 @@
 		4B49C05D1AE0F1080074CCB2 /* file.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B49C05C1AE0F1080074CCB2 /* file.plist */; };
 		4B6858FB1AE4EFCD00155ED9 /* demoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6858FA1AE4EFCD00155ED9 /* demoViewController.m */; };
 		4B6858FE1AE4F01100155ED9 /* CAITitleBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4B6858FD1AE4F01100155ED9 /* CAITitleBar.m */; };
+		4BAA54561B3C4D4B006F42B1 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA54551B3C4D4B006F42B1 /* RootViewController.m */; };
+		4BAA54591B3C541F006F42B1 /* ModelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA54581B3C541F006F42B1 /* ModelsViewController.m */; };
+		4BAA545C1B3C5436006F42B1 /* InterfaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA545B1B3C5436006F42B1 /* InterfaceViewController.m */; };
+		4BAA545F1B3C5459006F42B1 /* FileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA545E1B3C5459006F42B1 /* FileViewController.m */; };
+		4BAA54621B3C5473006F42B1 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BAA54611B3C5473006F42B1 /* SettingViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,8 +260,6 @@
 		4B49C0331AE0EB0F0074CCB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4B49C0341AE0EB0F0074CCB2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4B49C0371AE0EB0F0074CCB2 /* autoCoding.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = autoCoding.xcdatamodel; sourceTree = "<group>"; };
-		4B49C0391AE0EB0F0074CCB2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4B49C03A1AE0EB0F0074CCB2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4B49C03D1AE0EB0F0074CCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B49C03F1AE0EB0F0074CCB2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4B49C0421AE0EB0F0074CCB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -270,6 +272,16 @@
 		4B6858FA1AE4EFCD00155ED9 /* demoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = demoViewController.m; sourceTree = "<group>"; };
 		4B6858FC1AE4F01100155ED9 /* CAITitleBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAITitleBar.h; sourceTree = "<group>"; };
 		4B6858FD1AE4F01100155ED9 /* CAITitleBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CAITitleBar.m; sourceTree = "<group>"; };
+		4BAA54541B3C4D4B006F42B1 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		4BAA54551B3C4D4B006F42B1 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		4BAA54571B3C541F006F42B1 /* ModelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModelsViewController.h; sourceTree = "<group>"; };
+		4BAA54581B3C541F006F42B1 /* ModelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModelsViewController.m; sourceTree = "<group>"; };
+		4BAA545A1B3C5436006F42B1 /* InterfaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterfaceViewController.h; sourceTree = "<group>"; };
+		4BAA545B1B3C5436006F42B1 /* InterfaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterfaceViewController.m; sourceTree = "<group>"; };
+		4BAA545D1B3C5459006F42B1 /* FileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileViewController.h; sourceTree = "<group>"; };
+		4BAA545E1B3C5459006F42B1 /* FileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileViewController.m; sourceTree = "<group>"; };
+		4BAA54601B3C5473006F42B1 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		4BAA54611B3C5473006F42B1 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -561,13 +573,11 @@
 		4B49C02E1AE0EB0F0074CCB2 /* autoCoding */ = {
 			isa = PBXGroup;
 			children = (
+				4BAA54531B3C4D14006F42B1 /* source */,
 				4B08F2891AE76AD1003A3D0B /* ThirdPart */,
 				4B08F2831AE76A1B003A3D0B /* model */,
 				4B49C0331AE0EB0F0074CCB2 /* AppDelegate.h */,
 				4B49C0341AE0EB0F0074CCB2 /* AppDelegate.m */,
-				4B49C0391AE0EB0F0074CCB2 /* ViewController.h */,
-				4B49C03A1AE0EB0F0074CCB2 /* ViewController.m */,
-				4B49C03C1AE0EB0F0074CCB2 /* Main.storyboard */,
 				4B49C03F1AE0EB0F0074CCB2 /* Images.xcassets */,
 				4B49C0411AE0EB0F0074CCB2 /* LaunchScreen.xib */,
 				4B49C0361AE0EB0F0074CCB2 /* autoCoding.xcdatamodeld */,
@@ -606,6 +616,24 @@
 				4B49C04D1AE0EB0F0074CCB2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4BAA54531B3C4D14006F42B1 /* source */ = {
+			isa = PBXGroup;
+			children = (
+				4B49C03C1AE0EB0F0074CCB2 /* Main.storyboard */,
+				4BAA54541B3C4D4B006F42B1 /* RootViewController.h */,
+				4BAA54551B3C4D4B006F42B1 /* RootViewController.m */,
+				4BAA54571B3C541F006F42B1 /* ModelsViewController.h */,
+				4BAA54581B3C541F006F42B1 /* ModelsViewController.m */,
+				4BAA545A1B3C5436006F42B1 /* InterfaceViewController.h */,
+				4BAA545B1B3C5436006F42B1 /* InterfaceViewController.m */,
+				4BAA545D1B3C5459006F42B1 /* FileViewController.h */,
+				4BAA545E1B3C5459006F42B1 /* FileViewController.m */,
+				4BAA54601B3C5473006F42B1 /* SettingViewController.h */,
+				4BAA54611B3C5473006F42B1 /* SettingViewController.m */,
+			);
+			name = source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -766,8 +794,11 @@
 				4B08F2F91AE76AD1003A3D0B /* AFURLResponseSerialization.m in Sources */,
 				4B08F2FE1AE76AD1003A3D0B /* UIButton+AFNetworking.m in Sources */,
 				4B08F3141AE76AD1003A3D0B /* MTLValueTransformer.m in Sources */,
+				4BAA545C1B3C5436006F42B1 /* InterfaceViewController.m in Sources */,
+				4BAA54591B3C541F006F42B1 /* ModelsViewController.m in Sources */,
 				4B6858FB1AE4EFCD00155ED9 /* demoViewController.m in Sources */,
 				4B08F2FC1AE76AD1003A3D0B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				4BAA54621B3C5473006F42B1 /* SettingViewController.m in Sources */,
 				4B3AE9111AEA2440005C3B53 /* CAIClient.m in Sources */,
 				4B3AE8FC1AEA2210005C3B53 /* CLTFriend.m in Sources */,
 				4B3AE9091AEA2210005C3B53 /* CLTUploadImageResult.m in Sources */,
@@ -790,7 +821,6 @@
 				4B08F3181AE76AD1003A3D0B /* NSObject+MTLComparisonAdditions.m in Sources */,
 				4B08F3171AE76AD1003A3D0B /* NSError+MTLModelException.m in Sources */,
 				4B08F3041AE76AD1003A3D0B /* FMTokenizers.m in Sources */,
-				4B49C03B1AE0EB0F0074CCB2 /* ViewController.m in Sources */,
 				4B08F2871AE76A1B003A3D0B /* CAIAppVersion.m in Sources */,
 				4B08F2F41AE76AD1003A3D0B /* AFHTTPSessionManager.m in Sources */,
 				4B08F31B1AE76AD1003A3D0B /* CAIFMDBQuery.m in Sources */,
@@ -803,10 +833,12 @@
 				4B08F2F51AE76AD1003A3D0B /* AFNetworkReachabilityManager.m in Sources */,
 				4B08F2FF1AE76AD1003A3D0B /* UIImageView+AFNetworking.m in Sources */,
 				4B08F3161AE76AD1003A3D0B /* NSDictionary+MTLManipulationAdditions.m in Sources */,
+				4BAA545F1B3C5459006F42B1 /* FileViewController.m in Sources */,
 				4B08F30B1AE76AD1003A3D0B /* FMResultSet.m in Sources */,
 				4B08F2F31AE76AD1003A3D0B /* AFHTTPRequestOperationManager.m in Sources */,
 				4B3AE90B1AEA2210005C3B53 /* CLTUserPublish.m in Sources */,
 				4B3AE90A1AEA2210005C3B53 /* CLTUserInfo.m in Sources */,
+				4BAA54561B3C4D4B006F42B1 /* RootViewController.m in Sources */,
 				4B08F31D1AE76AD1003A3D0B /* MTLFMDBAdapter.m in Sources */,
 				4B08F3081AE76AD1003A3D0B /* FMDatabaseAdditions.m in Sources */,
 			);

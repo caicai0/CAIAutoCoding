@@ -2,7 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-
 	<key>CLTStatus</key>
 	<dict>
 		<key>instruction</key>
@@ -22,8 +21,7 @@
 			</dict>
 		</dict>
 	</dict>
-
-	<key>CLTNoDataRsult</key>
+	<key>CLTNoDataResult</key>
 	<dict>
 		<key>instruction</key>
 		<string>没有数据或是数据为空的返回数据结构</string>
@@ -40,7 +38,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>data</key>
 			<dict>
 				<key>serverName</key>
@@ -52,7 +49,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTUserPublish</key>
 	<dict>
 		<key>instruction</key>
@@ -70,7 +66,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>descriptionString</key>
 			<dict>
 				<key>serverName</key>
@@ -80,7 +75,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>time</key>
 			<dict>
 				<key>serverName</key>
@@ -92,7 +86,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTUserInfo</key>
 	<dict>
 		<key>instruction</key>
@@ -110,7 +103,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>nickName</key>
 			<dict>
 				<key>serverName</key>
@@ -120,7 +112,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>iCan</key>
 			<dict>
 				<key>serverName</key>
@@ -130,7 +121,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>gender</key>
 			<dict>
 				<key>serverName</key>
@@ -140,7 +130,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>age</key>
 			<dict>
 				<key>serverName</key>
@@ -150,7 +139,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>school</key>
 			<dict>
 				<key>serverName</key>
@@ -160,7 +148,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>majorIn</key>
 			<dict>
 				<key>serverName</key>
@@ -170,7 +157,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>grade</key>
 			<dict>
 				<key>serverName</key>
@@ -180,7 +166,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>career</key>
 			<dict>
 				<key>serverName</key>
@@ -190,7 +175,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>goodAt</key>
 			<dict>
 				<key>serverName</key>
@@ -200,7 +184,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>character</key>
 			<dict>
 				<key>serverName</key>
@@ -210,7 +193,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>insterest</key>
 			<dict>
 				<key>serverName</key>
@@ -220,7 +202,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>profile</key>
 			<dict>
 				<key>serverName</key>
@@ -230,7 +211,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>city</key>
 			<dict>
 				<key>serverName</key>
@@ -240,7 +220,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>publish</key>
 			<dict>
 				<key>serverName</key>
@@ -254,7 +233,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTGetUserInfoResult</key>
 	<dict>
 		<key>instruction</key>
@@ -272,7 +250,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>data</key>
 			<dict>
 				<key>serverName</key>
@@ -284,7 +261,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTRecommend</key>
 	<dict>
 		<key>instruction</key>
@@ -302,7 +278,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>photo</key>
 			<dict>
 				<key>serverName</key>
@@ -312,7 +287,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>nickName</key>
 			<dict>
 				<key>serverName</key>
@@ -322,7 +296,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>image</key>
 			<dict>
 				<key>serverName</key>
@@ -332,7 +305,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>descriptionString</key>
 			<dict>
 				<key>serverName</key>
@@ -342,7 +314,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>city</key>
 			<dict>
 				<key>serverName</key>
@@ -354,7 +325,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTGetRecommendResult</key>
 	<dict>
 		<key>instruction</key>
@@ -372,7 +342,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>data</key>
 			<dict>
 				<key>serverName</key>
@@ -384,7 +353,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTSearchUserId</key>
 	<dict>
 		<key>instruction</key>
@@ -404,7 +372,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTSearchUserIdResult</key>
 	<dict>
 		<key>instruction</key>
@@ -422,7 +389,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>data</key>
 			<dict>
 				<key>serverName</key>
@@ -434,7 +400,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTFriend</key>
 	<dict>
 		<key>instruction</key>
@@ -452,7 +417,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>name</key>
 			<dict>
 				<key>serverName</key>
@@ -462,7 +426,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>photo</key>
 			<dict>
 				<key>serverName</key>
@@ -474,7 +437,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTGetOtherUserListResult</key>
 	<dict>
 		<key>instruction</key>
@@ -492,7 +454,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>data</key>
 			<dict>
 				<key>serverName</key>
@@ -506,7 +467,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTStory</key>
 	<dict>
 		<key>instruction</key>
@@ -524,7 +484,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>title</key>
 			<dict>
 				<key>serverName</key>
@@ -534,7 +493,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>cover</key>
 			<dict>
 				<key>serverName</key>
@@ -544,7 +502,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>publishTime</key>
 			<dict>
 				<key>serverName</key>
@@ -556,7 +513,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTGetStoryListResult</key>
 	<dict>
 		<key>instruction</key>
@@ -574,7 +530,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>data</key>
 			<dict>
 				<key>serverName</key>
@@ -588,7 +543,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTStoryDetial</key>
 	<dict>
 		<key>instruction</key>
@@ -606,7 +560,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>author</key>
 			<dict>
 				<key>serverName</key>
@@ -616,7 +569,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>authorPhoto</key>
 			<dict>
 				<key>serverName</key>
@@ -626,7 +578,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>title</key>
 			<dict>
 				<key>serverName</key>
@@ -636,7 +587,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>cover</key>
 			<dict>
 				<key>serverName</key>
@@ -646,7 +596,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>content</key>
 			<dict>
 				<key>serverName</key>
@@ -656,7 +605,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>publishTime</key>
 			<dict>
 				<key>serverName</key>
@@ -668,7 +616,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTGetStoryDetialResult</key>
 	<dict>
 		<key>instruction</key>
@@ -686,7 +633,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>data</key>
 			<dict>
 				<key>serverName</key>
@@ -698,7 +644,6 @@
 			</dict>
 		</dict>
 	</dict>
-
 	<key>CLTUploadImageResult</key>
 	<dict>
 		<key>instruction</key>
@@ -716,7 +661,6 @@
 				<key>automic</key>
 				<false/>
 			</dict>
-
 			<key>data</key>
 			<dict>
 				<key>serverName</key>
